@@ -44,8 +44,7 @@ This software is distributed as accompanying software for the manuscript: P. Zha
 **Note:**
 1. Example data only showed 1000 sub-regions. Training for DL-AO used 6 million images. Additional training and validation datasets are available upon request.
 2. Network1-3 are three models with different training ranges used in DL-AO. The detailed training range sees Supplementary Table 4.
-3. Before running Jupyter Notebook ‘DL-AOInferenceDemo.ipynb’ in Colab, create an ‘ExampleData’ folder, then copy ‘MirrorMode.mat’, ‘testdata.mat’, ‘testlabel.mat’, ‘Network1.pth’, ‘Network2.pth’, ‘Network3.pth’ from the other two folders (
-Sections 1.1 and 1.2) into this ‘ExampleData’ folder in ‘DL-AO_Inference_Demo_Colab’ (see ‘Instruction for Testing Network in Web Browser.pdf’ for details)
+3. Before running Jupyter Notebook ‘DL-AOInferenceDemo.ipynb’ in Colab, create an ‘ExampleData’ folder, then copy ‘MirrorMode.mat’, ‘testdata.mat’, ‘testlabel.mat’, ‘Network1.pth’, ‘Network2.pth’, ‘Network3.pth’ from the other two folders (Sections 1.1 and 1.2) into this ‘ExampleData’ folder in ‘DL-AO_Inference_Demo_Colab’ (see ‘Instruction for Testing Network in Web Browser.pdf’ for details)
 
 
 ## 2. Instructions on generating training dataset
@@ -64,10 +63,10 @@ Ubuntu16.04LTS, Python3.6.9, Pytorch0.4.0, CUDA10.1, MatlabR2015a
 python main.py --datapath ./ExampleData --save ./Models
 ```
 
-The expected output and runtime with the small example training dataset is shown below:<br>
+The expected output and runtime with the small example training dataset is shown below:<br><br>
 <img src="/images/Image1.png" style="height: 208px; width: 624px;"/>
 
-Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br>
+Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br><br>
 <img src="/images/Image2.png" style="height: 204px; width: 624px;"/>
 
 ### 2. To test this, type the following command in terminal:
@@ -75,7 +74,7 @@ Due to insufficient training data included in 'ExampleData', the validation erro
 python test.py --datapath ./ExampleData/ --save ./result –checkptname ./ExampleData/Network2
 ```
 
-The expected output and runtime wiht the small testing daataset is shown below:<br>
+The expected output and runtime wiht the small testing daataset is shown below:<br><br>
 <img src="/images/Image3.png" style="height: 38px; width: 624px;"/>
 
 **Note:**
