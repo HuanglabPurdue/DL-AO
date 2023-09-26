@@ -65,7 +65,7 @@ python main.py --datapath ./ExampleData --save ./Models
 ```
 
 The expected output and runtime with the small example training dataset is shown below:
-<img src="https://github.com/HuanglabPurdue/DL-AO/tree/main/images/Image1.png" style="height: 100px; width: 300px;"/>
+<img src="/images/Image1.png" style="height: 100px; width: 300px;"/>
 
 Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:
 <img src="https://github.com/HuanglabPurdue/DL-AO/tree/main/images/Image2.png"/>
