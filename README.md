@@ -1,5 +1,5 @@
 # DL-AO (Deep Learning-driven Adaptive Optics for Single-molecule Localization Microscopy)
-This software is distributed as accompanying software for the manuscript: P. Zhang, D. Ma, X. Cheng, A. P. Tsai, Y. Tang, H. Gao, L. Fang, C. Bi, G. E. Landreth, A. A. Chubykin, F. Huang, "Deep Learning-driven Adaptive Optics for Single-molecule Localization Microscopy"(2023) **Nature Methods**, Advanced Online Publication, doi: https://doi.org/10.1038/s41592-023-02029-0
+This software is distributed as accompanying software for the manuscript: P. Zhang, D. Ma, X. Cheng, A. P. Tsai, Y. Tang, H. Gao, L. Fang, C. Bi, G. E. Landreth, A. A. Chubykin, F. Huang, "Deep Learning-driven Adaptive Optics for Single-molecule Localization Microscopy" (2023) **Nature Methods**, Advanced Online Publication, doi: https://doi.org/10.1038/s41592-023-02029-0
 
 
 ## 1. Files included in this package
@@ -65,10 +65,10 @@ python main.py --datapath ./ExampleData --save ./Models
 ```
 
 The expected output and runtime with the small example training dataset is shown below:
-![alt text](https://github.com/HuanglabPurdue/DL-AO/images/Image1.png?raw=true)
+![alt text](https://github.com/HuanglabPurdue/DL-AO/tree/main/images/Image1.png)
 
 Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:
-![alt text](https://github.com/HuanglabPurdue/DL-AO/images/Image2.png?raw=true)
+![alt text](https://github.com/HuanglabPurdue/DL-AO/tree/main/images/Image2.png)
 
 ### 2. To test this, type the following command in terminal:
 ```
@@ -76,7 +76,7 @@ python test.py --datapath ./ExampleData/ --save ./result –checkptname ./Exampl
 ```
 
 The expected output and runtime wiht the small testing daataset is shown below:
-![alt text](https://github.com/HuanglabPurdue/DL-AO/images/Image3.png?raw=true)
+![alt text](https://github.com/HuanglabPurdue/DL-AO/tree/main/images/Image3.png)
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
