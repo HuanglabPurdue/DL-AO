@@ -64,10 +64,10 @@ Ubuntu16.04LTS, Python3.6.9, Pytorch0.4.0, CUDA10.1, MatlabR2015a
 python main.py --datapath ./ExampleData --save ./Models
 ```
 
-The expected output and runtime with the small example training dataset is shown below:
+The expected output and runtime with the small example training dataset is shown below:<br>
 <img src="/images/Image1.png" style="height: 208px; width: 624px;"/>
 
-Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:
+Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br>
 <img src="/images/Image2.png" style="height: 204px; width: 624px;"/>
 
 ### 2. To test this, type the following command in terminal:
@@ -75,8 +75,8 @@ Due to insufficient training data included in 'ExampleData', the validation erro
 python test.py --datapath ./ExampleData/ --save ./result –checkptname ./ExampleData/Network2
 ```
 
-The expected output and runtime wiht the small testing daataset is shown below:
-<img src="/images/Image2.png" style="height: 38px; width: 624px;"/>
+The expected output and runtime wiht the small testing daataset is shown below:<br>
+<img src="/images/Image3.png" style="height: 38px; width: 624px;"/>
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
