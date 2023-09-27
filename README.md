@@ -46,12 +46,12 @@ This software is distributed as accompanying software for the manuscript: P. Zha
 
 **Note:**
 ExampleData is required for running the Jupyter Notebook. Before running ‘DL-AOInferenceDemo.ipynb’, you need to copy the following data into this folder:
-1. MirrorMode.mat  (in https://github.com/HuanglabPurdue/DL-AO/Training Data Generation/ExampleData)
-2. testdata.mat    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
-3. teslabel.mat    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
-4. Network1.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
-5. Network2.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
-6. Network3.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
+1. MirrorMode.mat  (in ./Training Data Generation/ExampleData)
+2. testdata.mat    (in ./Training and testing for DL-AO/ExampleData)
+3. teslabel.mat    (in ./Training and testing for DL-AO/ExampleData)
+4. Network1.pth    (in ./Training and testing for DL-AO/ExampleData)
+5. Network2.pth    (in ./Training and testing for DL-AO/ExampleData)
+6. Network3.pth    (in ./Training and testing for DL-AO/ExampleData)
 
 
 ## 2. Instructions on generating training dataset
@@ -71,10 +71,10 @@ python main.py --datapath ./ExampleData --save ./Models
 ```
 
 The expected output and runtime with the small example training dataset is shown below:<br><br>
-<img src="/images/Image1.png" style="height: 300px; width: 1000px;"/>
+<img src="/images/Image1.png" style="height: 300px; width: 1100px;"/>
 
 Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br><br>
-<img src="/images/Image2.png" style="height: 300px; width: 1000px;"/>
+<img src="/images/Image2.png" style="height: 300px; width: 1100px;"/>
 
 ### 2. To test this, type the following command in terminal:
 ```
@@ -82,7 +82,7 @@ python test.py --datapath ./ExampleData/ --save ./result –checkptname ./Exampl
 ```
 
 The expected output and runtime wiht the small testing daataset is shown below:<br><br>
-<img src="/images/Image3.png" style="height: 60px; width: 1000px;"/>
+<img src="/images/Image3.png" style="height: 60px; width: 1100px;"/>
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
