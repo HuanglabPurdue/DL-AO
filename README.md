@@ -71,10 +71,10 @@ python main.py --datapath ./ExampleData --save ./Models
 ```
 
 The expected output and runtime with the small example training dataset is shown below:<br><br>
-<img src="/images/Image1.png" style="height: 300px; width: 950px;"/>
+<img src="/images/Image1.png" style="height: 300px; width: 1000px;"/>
 
 Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br><br>
-<img src="/images/Image2.png" style="height: 300px; width: 958px;"/>
+<img src="/images/Image2.png" style="height: 300px; width: 1000px;"/>
 
 ### 2. To test this, type the following command in terminal:
 ```
@@ -82,7 +82,7 @@ python test.py --datapath ./ExampleData/ --save ./result –checkptname ./Exampl
 ```
 
 The expected output and runtime wiht the small testing daataset is shown below:<br><br>
-<img src="/images/Image3.png" style="height: 60px; width: 986px;"/>
+<img src="/images/Image3.png" style="height: 60px; width: 1000px;"/>
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
