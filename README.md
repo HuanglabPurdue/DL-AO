@@ -32,6 +32,9 @@ This software is distributed as accompanying software for the manuscript: P. Zha
 * opts.py: Definitions of user adjustable variables
 * test.py: Script for testing training result
 
+**Note:**
+1. Example data only showed 1000 sub-regions. Training for DL-AO used 6 million images. Additional training and validation datasets are available upon request.
+2. Network1-3 are three models with different training ranges used in DL-AO. The detailed training range sees Supplementary Table 4.
 
 ### 1.3 Content of 'DL-AO_Inference_Demo_Colab'
 **Google Colaboratory (Colab) Notebook:**
@@ -42,9 +45,13 @@ This software is distributed as accompanying software for the manuscript: P. Zha
 * opts.py: Definitions of user adjustable variables
 
 **Note:**
-1. Example data only showed 1000 sub-regions. Training for DL-AO used 6 million images. Additional training and validation datasets are available upon request.
-2. Network1-3 are three models with different training ranges used in DL-AO. The detailed training range sees Supplementary Table 4.
-3. Before running Jupyter Notebook ‘DL-AOInferenceDemo.ipynb’ in Colab, create an ‘ExampleData’ folder, then copy ‘MirrorMode.mat’, ‘testdata.mat’, ‘testlabel.mat’, ‘Network1.pth’, ‘Network2.pth’, ‘Network3.pth’ from the other two folders (Sections 1.1 and 1.2) into this ‘ExampleData’ folder in ‘DL-AO_Inference_Demo_Colab’ (see ‘Instruction for Testing Network in Web Browser.pdf’ for details)
+ExampleData is required for running the Jupyter Notebook. Before running ‘DL-AOInferenceDemo.ipynb’, you need to copy the following data into this folder:
+1. MirrorMode.mat  (in https://github.com/HuanglabPurdue/DL-AO/Training Data Generation/ExampleData)
+2. testdata.mat    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
+3. teslabel.mat    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
+4. Network1.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
+5. Network2.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
+6. Network3.pth    (in https://github.com/HuanglabPurdue/DL-AO/Training and testing for DL-AO/ExampleData)
 
 
 ## 2. Instructions on generating training dataset
@@ -54,7 +61,7 @@ Change MATLAB current folder to the directory that contains main.m. Then run mai
 Microsoft Windows 10 Education, Matlab R2020a, DIPimage2.8.1 (http://www.diplib.org/).
 
 
-## 3. Instructions on training and testing neural networks for DL-AOi
+## 3. Instructions on training and testing neural networks for DL-AO
 **The code has been tested on the following system and packages:**\
 Ubuntu16.04LTS, Python3.6.9, Pytorch0.4.0, CUDA10.1, MatlabR2015a
 
@@ -82,4 +89,32 @@ The expected output and runtime wiht the small testing daataset is shown below:<
 2. The user could open errorplot.png in folder ‘./Models/’ to observe the evolution of training and validation errors.
 3. The user adjustable variables for training will be saved in ‘/Models/opt.txt’
 4. The training and validation errors for each iteration will be saved in ‘Models/error.log’ (The 1st column is training error and the 2nd column is validation error)
-5. Pytorch Installation Instruction and typical installation time see: https://pytorch.org/get-started/locally/ 
+5. Pytorch Installation Instruction and typical installation time see: https://pytorch.org/get-started/locally/
+
+
+## 4. Instructions on testing the trained DL-AO network in Web Browser
+This code has been tested in Google Chrome Browser on Google Colaboratory (Colab, https://colab.research.google.com/), which provides free access to essential computing hardware such as GPUs or TPUs used in DL-AO. 
+Besides, all the packages essential for testing DL-AO are pre-installed in Colab. Therefore, no installation processes are required on your local PC. 
+
+To run the DL-AO inference with trained network:
+
+1. Open https://drive.google.com/drive/my-drive in Google Chrome Browser and log in with your Gmail account.
+
+2. Drag the entire ‘DL-AO_Inference_Demo_Colab’ folder into the ‘My Drive’ folder in your Google Drive.
+
+3. Open ‘DL-AO_Inference_Demo_Colab’ folder in your Google Drive and you should see the files as follows:
+<img src="/images/Image4.png" style="height: 190px; width: 568px;"/>
+
+4. Right-click the Jupyter Notebook named ‘DL-AOInferenceDemo.ipynb’, then select “Google Colaboratory” to open the Notebook in Colab 
+<img src="/images/Image5.png" style="height: 166px; width: 566px;"/>
+
+5. To enable GPU in your notebook, click "Edit", choose "Notebook Setting", then select “GPU” as Hardware Accelerator in “Notebook Setting”
+<img src="/images/Image6.png" style="height: 976px; width: 1640px;"/>
+
+6. Run the Code Cell in ‘DL-AOInferenceDemo.ipynb’ by clicking the “run” button in the top left corner. There are two Code Cells in the ‘DL-AOInferenceDemo.ipynb’ Notebook. The first one is for testing the DL-AO network, and the second one is for displaying the test result. An example output of these Code Cells is attached as follows:
+<img src="/images/Image7.png" style="height: 446px; width: 624px;"/>
+
+
+**Note:**
+1. We compare the estimation with the ground truth using wavefront shape, instead of mirror mode coefficients. This is because one wavefront shape can correspond to different mirror mode coefficients due to the coupling between experimental mirror deformation modes.
+2. A step-by-step explanation on the Colab code can be found in Section3 of "Instruction for Testing Network in Web Browser.pdf"
