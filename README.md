@@ -109,7 +109,7 @@ To run the DL-AO inference with trained network:
 <img src="/images/Image5.png" style="height: 166px; width: 566px;"/>
 
 5. To enable GPU in your notebook, click "Edit", choose "Notebook Setting", then select “GPU” as Hardware Accelerator in “Notebook Setting”
-<img src="/images/Image6.png" style="height: 1640px; width: 974px;"/>
+<img src="/images/Image6.png" style="height: 488px; width: 820px;"/>
 
 6. Run the Code Cell in ‘DL-AOInferenceDemo.ipynb’ by clicking the “run” button in the top left corner. There are two Code Cells in the ‘DL-AOInferenceDemo.ipynb’ Notebook. The first one is for testing the DL-AO network, and the second one is for displaying the test result. An example output of these Code Cells is attached as follows:
 <img src="/images/Image7.png" style="height: 446px; width: 624px;"/>
