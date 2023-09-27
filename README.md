@@ -82,7 +82,7 @@ python test.py --datapath ./ExampleData/ --save ./result –checkptname ./Exampl
 ```
 
 The expected output and runtime wiht the small testing daataset is shown below:<br><br>
-<img src="/images/Image3.png" style="height: 60px; width: 3000px;"/>
+<img src="/images/Image3.png" style="height: 60px; width: 6000px;"/>
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
