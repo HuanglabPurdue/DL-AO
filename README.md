@@ -71,10 +71,10 @@ python main.py --datapath ./ExampleData --save ./Models
 ```
 
 The expected output and runtime with the small example training dataset is shown below:<br><br>
-<img src="/images/Image1.png" style="height: 300px; width: 1100px;"/>
+<img src="/images/Image1.png" style="height: 300px; width: 1500px;"/>
 
 Due to insufficient training data included in 'ExampleData', the validation error is inf.  More training datasets can be generated with the Matlab code described in the Section2. An example output wiht 100 times more training data is shown below:<br><br>
-<img src="/images/Image2.png" style="height: 300px; width: 1100px;"/>
+<img src="/images/Image2.png" style="height: 300px; width: 1500px;"/>
 
 ### 2. To test this, type the following command in terminal:
 ```
@@ -82,7 +82,7 @@ python test.py --datapath ./ExampleData/ --save ./result –checkptname ./Exampl
 ```
 
 The expected output and runtime wiht the small testing daataset is shown below:<br><br>
-<img src="/images/Image3.png" style="height: 60px; width: 1100px;"/>
+<img src="/images/Image3.png" style="height: 60px; width: 1500px;"/>
 
 **Note:**
 1. Each iteration will save a model named by the iteration number in folder ‘./Models/’
@@ -112,7 +112,7 @@ To run the DL-AO inference with trained network:
 <img src="/images/Image6.png" style="height: 488px; width: 820px;"/>
 
 6. Run the Code Cell in ‘DL-AOInferenceDemo.ipynb’ by clicking the “run” button in the top left corner. There are two Code Cells in the ‘DL-AOInferenceDemo.ipynb’ Notebook. The first one is for testing the DL-AO network, and the second one is for displaying the test result. An example output of these Code Cells is attached as follows:
-<img src="/images/Image7.png" style="height: 500px; width: 700px;"/>
+<img src="/images/Image7.png" style="height: 700px; width: 980px;"/>
 
 
 **Note:**
